@@ -1,6 +1,9 @@
 html {
   font-size: 10px;
 }
+input:focus {
+  outline: none;
+}
 .header-navbar .brand-text-block {
   display: inline-block;
 }
@@ -30,20 +33,23 @@ html {
   font-size: 1.5rem;
   font-weight: 700;
   color: #424242 !important;
-  content: "•";
+  content: "";
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .header-navbar ul .divider:after {
-    content: "";
+    content: "•";
   }
 }
-.header-btn {
+.header-navbar .header-btn {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #ffffff !important;
   background-color: #de2b24;
   padding: 6px 22px;
+}
+.header-navbar .header-btn:hover {
+  background-color: #ca251e;
 }
 .banner {
   padding: 0px 0;
@@ -71,13 +77,20 @@ html {
   font-weight: 700;
   color: #ffffff !important;
   text-transform: uppercase;
-  padding: 25px 40px;
+  padding: 20px 40px;
   background-color: #f8cd53;
   margin: 32px 0 236px;
+  border-radius: 5px;
+}
+.banner button:hover {
+  background-color: #f7c63a;
+}
+.section {
+  padding-bottom: 100px;
 }
 .section-subtitle {
-  display: inline-block;
   margin-top: 100px;
+  display: inline-block;
 }
 .section-subtitle h2 {
   font-family: 'Helvetica Neue', sans-serif;
@@ -98,9 +111,6 @@ html {
   background-color: #424242;
   margin: 14px auto 18px;
   text-align: center;
-}
-.services .content {
-  margin-bottom: 119px;
 }
 .services .content .service-block img {
   margin: 28px 0 28px;
@@ -133,12 +143,13 @@ html {
   display: inline-block;
   position: relative;
   float: left;
+  height: 236px;
 }
 .approuch .approuch-block .approuch-block-img .inside-block {
   position: absolute;
   display: table;
-  width: 101px;
-  height: 101px;
+  width: 29.79351032%;
+  height: 42.79661017%;
   border: 2px solid white;
   border-radius: 5px;
   background-color: #de2b24;
@@ -149,11 +160,11 @@ html {
   vertical-align: middle;
 }
 .approuch .approuch-block .approuch-block-img .inside-block .block-step-number {
-  font-family: Georgia, sans-serif;
+  font-family: Open Sans, sans-serif;
   font-size: 6rem;
   font-weight: 700;
   color: #ffffff !important;
-  margin: -3rem 0 -3rem;
+  margin: -2rem 0 -3rem;
 }
 .approuch .approuch-block .approuch-block-img .inside-block .block-step span {
   display: inline-block;
@@ -195,4 +206,208 @@ html {
   font-weight: 400;
   color: #424242 !important;
   line-height: 2.2rem;
+}
+.work {
+  background-color: #de2b24;
+}
+.work .section-subtitle {
+  margin-bottom: 45px;
+}
+.work .section-subtitle h2,
+.work .section-subtitle span,
+.work .section-subtitle hr {
+  color: white !important;
+}
+.work .section-subtitle hr {
+  background-color: white;
+}
+.work-board .block-container {
+  height: 253px;
+  width: 255px;
+  overflow: hidden;
+  display: inline-block;
+}
+.work-board .block-container .board-box {
+  display: inline-block;
+  height: 253px;
+  width: 255px;
+  background-color: #f35e59;
+  position: relative;
+}
+.work-board .block-container .board-box .work-block {
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+  height: 120px;
+  margin-top: -60px;
+  top: 50%;
+  margin-left: -100px;
+  left: 50%;
+}
+.work-board .block-container .board-box .work-block img {
+  display: block;
+  margin-bottom: 15px;
+}
+.work-board .block-container .board-box .work-block .work-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  display: block;
+}
+.work-board .block-container .board-box .work-block .work-subtitle {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  display: inline-block;
+}
+.fb-anal {
+  background-color: #1287bf;
+}
+.fb-anal .section-subtitle h2 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #ffffff !important;
+}
+.fb-anal .section-subtitle span {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  display: block;
+}
+.fb-anal .section-subtitle img {
+  margin: 20px auto;
+  -webkit-background-clip: text;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+.fb-anal-form {
+  background-color: white;
+  display: inline-block;
+  border-radius: 5px;
+  position: relative;
+}
+.fb-anal-form .form-cross img {
+  position: absolute;
+  margin-top: -24.5px;
+  left: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.fb-anal-form .form-cross span {
+  position: absolute;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: #ffffff !important;
+  width: 49px;
+  height: 49px;
+  margin: 0px;
+  margin-top: -24.5px;
+  left: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.fb-anal-form .form-cross span::-moz-selection {
+  background: transparent;
+}
+.fb-anal-form .form-cross span::selection {
+  background: transparent;
+}
+.fb-anal-form .form-cross span::-moz-selection {
+  background: transparent;
+}
+.fb-anal-form .form-cross span:hover {
+  cursor: default;
+}
+.fb-anal-form span {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #424242 !important;
+  display: inline-block;
+  margin: 35px 60px;
+}
+.fb-anal-form .form-input input {
+  display: inline-block;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #424242 !important;
+  width: 65%;
+  height: 50px !important;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 0 5px rgba(18, 135, 191, 0.66);
+          box-shadow: 0 0 5px rgba(18, 135, 191, 0.66);
+  border: 1px solid #d8d8d8;
+  padding-left: 15px;
+}
+.fb-anal-form .form-input input:active {
+  border: 1px solid #1287bf;
+}
+.fb-anal-form .form-btn input {
+  display: inline-block;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  border-radius: 4px;
+  background-color: #de2b24;
+  margin: 30px auto 60px;
+}
+.fb-anal-form .form-btn input:hover {
+  background-color: #ca251e;
+}
+@media (max-width: 767.5px) {
+  .approuch-block {
+    width: 339px;
+  }
+  .inside-block {
+    margin-left: -50px;
+    top: 100% !important;
+    left: 50% !important;
+    -webkit-transform: translateX(0%) !important;
+            transform: translateX(0%) !important;
+  }
+  .block-text {
+    padding-top: 45px;
+  }
+  .fb-anal-form span {
+    margin: 35px 25px;
+  }
+  .form-input input {
+    width: 90% !important;
+  }
+}
+@media (max-width: 438px) {
+  .banner button {
+    width: 70vw;
+    font-size: 5vw;
+    padding: 4vw 8vw;
+  }
+  .section {
+    padding-bottom: 50px;
+  }
+  .section .section-subtitle {
+    margin-top: 50px;
+  }
+  /* .approuch-block {
+		width: 80vw;		
+		// height: 100vw;
+	}
+	.approuch-block-img {
+		img {
+			width: 80vw;
+			// height: 80vw * 236px / 339px;
+		}
+		// height: 80vw * 236px / 339px;
+	} */
 }
