@@ -4,7 +4,7 @@
 @form-features-color: #de2b24;
 @block-color: #f35e59;
 @fb-anal-bg-color: #1287bf;
-@bot-bg-color: #f8cd53;
+@bot-bg-color: #2a2a2a;
 @footer-color: #515151;
 @btn-color: #f8cd53;
 
@@ -111,9 +111,9 @@ input {
 }
 
 // Заголовок страниц
-.section {
+section {
 	padding-bottom: 100px;
-	&-subtitle {
+	.section-subtitle {
 		margin-top: 100px;
 		// margin-bottom: 45px;	
 		display: inline-block;
@@ -138,9 +138,12 @@ input {
 .services {
 	.content {
 		// margin-bottom: 119px;
+		text-align: center;
 		.service-block {
+			text-align: center;
 			img {
-				margin: 28px 0 28px;
+				display: block;
+				margin: 28px auto 28px;
 			}
 			h3 {
 				.text(2.2rem, 700);
@@ -148,10 +151,40 @@ input {
 			}
 			span {	
 				display: inline-block;
+				width: 310px;
 				.text(1.4rem, 400);
 			}
 		}
 	}
+}
+
+.slick-active {
+	outline: none;
+}
+
+.arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	z-index: 99;
+	width: 2rem;
+	height: 2rem;
+	&:focus {
+		outline: none;
+	}
+}
+
+.left {
+	left: 0;
+	background: url(../img/left-arrow.svg) center no-repeat;
+	background-size: 100%;
+}
+
+.right {
+	right: 0;
+	background: url(../img/right-arrow.svg) center no-repeat;
+	background-size: 100%;
 }
 
 .approuch {
@@ -374,7 +407,84 @@ input {
 	}
 }
 
+.get-in-touch {
+	background-color: @bot-bg-color;
+	.section-subtitle {
+		h2 {
+			.text(2.9rem, 700, white);
+		}
+		margin-bottom: 18px;
+	}
+	.soc-media {
+		margin-bottom: 18px;
+		button, a {
+			display: inline-block;
+			width: 45px;
+			height: 45px;
+			background-color: transparent;
+			border: 2px solid @footer-color;
+			border-radius: 2px;
+			&:hover {
+				border: 2px solid @form-features-color;
+			}
+			margin: 12px;
+			.box-icon {
+				height: 22px;
+				transform: translateY(40%);
+			}
+		}
+	}
+	form {
+		.text(1.4rem, 400, #cecece, 'Open Sans');
+		.form-input {
+			display: block;
+			background-color: @footer-color;
+			// width: 443px !important;
+			// width: 65%;
+			height: 54px !important;
+			border-radius: 2px;
+			margin: 25px auto;
+			border: 1px solid @footer-color;
+			padding-left: 15px;
+			&:hover, &:focus {
+				border: 2px solid @form-features-color;
+			}
+		}
+		.form-submit {
+			width: 149px;
+			height: 49px;
+			background-color: transparent;
+			border: 2px solid @footer-color;
+			.text(1.7rem, 700, white, 'Helvetica');
+			&:hover, &:focus {
+				border: 2px solid @form-features-color;
+			}
+		}
+	}
+}
+
+footer {
+	background-color: @footer-color;
+	.footer-text{
+		.text(1.4rem, 400, white, 'Open Sans');
+		padding: 25px 0;
+		text-align: center;
+		a {
+			color: #9bd6f2;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	}
+}
+
 @media (max-width: 767.5px){
+	section {
+		padding-bottom: 50px;
+		.section-subtitle {
+			margin-top: 50px;
+		}
+	}
 	.approuch-block {
 		width: 339px;
 	}
@@ -407,20 +517,19 @@ input {
 		font-size: 70vw / 14;
 		padding: 4vw 4vw * 2;
 	}
-	.section {
-		padding-bottom: 50px;
-		.section-subtitle {
-			margin-top: 50px;
-		}
-	}
 	/* .approuch-block {
-		width: 80vw;		
-		// height: 100vw;
+		// width: 90vw;		
+		// height: 90vw * 236px / 339px;
 	}
 	.approuch-block-img {
+		width: 90vw;		
+		height: 90vw * 236px / 339px;
 		img {
-			width: 80vw;
+			width: 90vw;
 			// height: 80vw * 236px / 339px;
+		}
+		.inside-block {
+			// height: 29.5vw !important;
 		}
 		// height: 80vw * 236px / 339px;
 	} */
