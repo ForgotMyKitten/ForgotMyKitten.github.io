@@ -4,6 +4,25 @@ html {
 input:focus {
   outline: none;
 }
+.cross img {
+  position: absolute;
+  left: 100%;
+  -webkit-transform: translateX(-50%) translateY(-45%);
+          transform: translateX(-50%) translateY(-45%);
+}
+.cross span {
+  position: absolute;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: #ffffff !important;
+  width: 49px;
+  height: 49px;
+  margin: 0px;
+  left: 100%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
 .header-navbar .brand-text-block {
   display: inline-block;
 }
@@ -57,7 +76,7 @@ input:focus {
   background-size: cover;
 }
 .banner h1 {
-  padding-top: 170px;
+  padding-top: 187px;
 }
 .banner h1 strong {
   font-family: 'Helvetica Neue', sans-serif;
@@ -79,11 +98,109 @@ input:focus {
   text-transform: uppercase;
   padding: 20px 40px;
   background-color: #f8cd53;
-  margin: 32px 0 236px;
+  margin: 32px 0 260px;
   border-radius: 5px;
 }
 .banner button:hover {
   background-color: #f7c63a;
+}
+.popup {
+  display: none;
+  z-index: 99;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-content {
+  text-align: center;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border-radius: 5px;
+}
+.popup-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  width: 0px;
+  height: 0px;
+  font-size: 3rem;
+}
+.popup-close:focus {
+  outline: 0 none !important;
+}
+.popup-close img {
+  position: absolute;
+  left: 100%;
+  -webkit-transform: translateX(-50%) translateY(-45%);
+          transform: translateX(-50%) translateY(-45%);
+}
+.popup-close span {
+  position: absolute;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: #ffffff !important;
+  width: 49px;
+  height: 49px;
+  margin: 0px;
+  left: 100%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+.popup-header {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #424242 !important;
+  margin: 20px auto;
+}
+.popup-form .form-input input {
+  display: inline-block;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #424242 !important;
+  width: 65%;
+  height: 50px !important;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  border: 1px solid #d8d8d8;
+  padding-left: 15px;
+  width: 90%;
+}
+.popup-form .form-input input:active {
+  border: 1px solid #1287bf;
+  -webkit-box-shadow: 0 0 5px rgba(18, 135, 191, 0.66);
+          box-shadow: 0 0 5px rgba(18, 135, 191, 0.66);
+}
+.popup-form .form-btn input {
+  display: inline-block;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  border-radius: 4px;
+  background-color: #de2b24;
+  margin: 30px auto 60px;
+  width: 60%;
+  margin: 10px auto 30px;
+}
+.popup-form .form-btn input:hover {
+  background-color: #ca251e;
 }
 section {
   padding-bottom: 100px;
@@ -209,18 +326,16 @@ section .section-subtitle hr {
   color: #ffffff !important;
 }
 .approuch .approuch-block .approuch-block-img .block-left {
-  margin-top: -50px;
   top: 50%;
   left: 0%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 .approuch .approuch-block .approuch-block-img .block-right {
-  margin-top: -50px;
   top: 50%;
   right: 0%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
+  -webkit-transform: translateX(50%) translateY(-50%);
+          transform: translateX(50%) translateY(-50%);
 }
 .approuch .approuch-block .block-text {
   vertical-align: middle;
@@ -327,10 +442,9 @@ section .section-subtitle hr {
 }
 .fb-anal-form .form-cross img {
   position: absolute;
-  margin-top: -24.5px;
   left: 100%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) translateY(-45%);
+          transform: translateX(-50%) translateY(-45%);
 }
 .fb-anal-form .form-cross span {
   position: absolute;
@@ -341,10 +455,9 @@ section .section-subtitle hr {
   width: 49px;
   height: 49px;
   margin: 0px;
-  margin-top: -24.5px;
   left: 100%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 .fb-anal-form .form-cross span::-moz-selection {
   background: transparent;
@@ -376,13 +489,13 @@ section .section-subtitle hr {
   height: 50px !important;
   border-radius: 2px;
   margin-bottom: 10px;
-  -webkit-box-shadow: 0 0 5px rgba(18, 135, 191, 0.66);
-          box-shadow: 0 0 5px rgba(18, 135, 191, 0.66);
   border: 1px solid #d8d8d8;
   padding-left: 15px;
 }
 .fb-anal-form .form-input input:active {
   border: 1px solid #1287bf;
+  -webkit-box-shadow: 0 0 5px rgba(18, 135, 191, 0.66);
+          box-shadow: 0 0 5px rgba(18, 135, 191, 0.66);
 }
 .fb-anal-form .form-btn input {
   display: inline-block;
@@ -492,15 +605,19 @@ footer .footer-text a:hover {
   section .section-subtitle {
     margin-top: 50px;
   }
+  .banner {
+    background-position: 80%;
+  }
   .approuch-block {
     width: 339px;
   }
   .inside-block {
-    margin-left: -50px;
     top: 100% !important;
     left: 50% !important;
-    -webkit-transform: translateX(0%) !important;
-            transform: translateX(0%) !important;
+  }
+  .block-right {
+    -webkit-transform: translateX(-50%) translateY(-50%) !important;
+            transform: translateX(-50%) translateY(-50%) !important;
   }
   .block-text {
     padding-top: 45px;

@@ -49,7 +49,7 @@
 			  <li class="nav-item my-1 my-lg-0 mx-0 mx-lg-3">
 			    <a class="nav-link" href="#">Our Work</a>
 			  </li>
-			  <button class="btn header-btn my-1 my-lg-0 mx-0 mx-lg-3">Free Consultation</button>
+			  <button class="btn popup-btn header-btn my-1 my-lg-0 mx-0 mx-lg-3">Free Consultation</button>
 			</ul>
 		</div>
 		</div>
@@ -61,10 +61,36 @@
 				<strong>We Providing</strong><br>
 				<span>Social Media marketing for businesses</span>
 			</h1>
-			<button class="btn">FREE CONSULTATION</button>
+			<button class="btn popup-btn">FREE CONSULTATION</button>
 		</div>
 	</div>
 	
+	<div class="popup">
+		<div class="popup-content col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+			<button class="popup-close">
+				<img src="img/cross.svg" alt="Cross">
+				<span>&times;</span>
+			</button>
+			<h3 class="popup-header">Agree? Understand?</h3>
+			<div class="popup-form">
+				<form action="#">
+					<div class="form-input">
+						<input type="text" class="form-control" placeholder="Your name">
+					</div>
+					<div class="form-input">
+						<input type="text" class="form-control" placeholder="Contact Number">
+					</div>
+					<div class="form-input">
+						<input type="text" class="form-control" placeholder="Company Name">
+					</div>
+					<div class="form-btn">							
+						<input class="btn" type="submit" value="GET NOW">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<section class="services">
 		<div class="container text-center">
 			<div class="section-subtitle">
@@ -253,7 +279,7 @@
 				<div class="form-inline fb-anal-form col-11 col-md-10 col-lg-9 col-xl-8">
 					<div class="form-cross">
 						<img src="img/cross.svg" alt="Cross">
-						<span>X</span>
+						<span>&times;</span>
 					</div>
 
 					<form id="fb-anal-form" action="#">
@@ -316,6 +342,14 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
+        	$('.popup-btn').on('click', function(event) {
+        		event.preventDefault();
+        		$('.popup').fadeIn();
+        	});
+        	$('.popup-close').on('click', function(event) {
+        		event.preventDefault();
+        		$('.popup').fadeOut();
+        	});
           	$('.services-slider').slick({
 				infinite: true,
 				slidesToShow: 3,
