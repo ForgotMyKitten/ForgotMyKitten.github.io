@@ -192,7 +192,8 @@ input:focus {
   font-weight: 700;
   color: #ffffff !important;
   text-transform: uppercase;
-  padding: 15px 25px;
+  width: 161px;
+  height: 46px;
   border-radius: 4px;
   background-color: #de2b24;
   margin: 30px auto 60px;
@@ -505,7 +506,8 @@ section .section-subtitle hr {
   font-weight: 700;
   color: #ffffff !important;
   text-transform: uppercase;
-  padding: 15px 25px;
+  width: 161px;
+  height: 46px;
   border-radius: 4px;
   background-color: #de2b24;
   margin: 30px auto 60px;
