@@ -126,10 +126,10 @@
 				<hr>
 			</div>
 
-			<div class="approuch-block d-flex flex-column flex-md-row align-items-center justify-content-center mx-auto">
+			<div class="approuch-block d-flex flex-column flex-md-row align-items-center mx-auto">
 				<div class="approuch-block-img mr-md-auto">
 					<img src="img/approch1.jpg" alt="Approuch 1">
-					<div class="inside-block block-right">
+					<div class="inside-block block-right" data-proportion-h="1">
 						<div class="block-step">
 							<div class="block-step-number">1</div>
 							<span>step</span>
@@ -137,16 +137,16 @@
 					</div>
 				</div>
 				
-				<div class="block-text col-md-4 col-lg-6 col-xl-7 mx-auto my-3 my-md-0 text-left">
+				<div class="block-text col-md-5 col-lg-6 col-xl-7 mx-auto my-3 my-md-0 mx-md-2 text-left">
 					<h3>Step 1 : Heading Here</h3>
 					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</span>
 				</div>	
 			</div>
 
-			<div class="approuch-block d-flex flex-column flex-md-row-reverse align-items-center justify-content-center  mx-auto">
+			<div class="approuch-block d-flex flex-column flex-md-row-reverse align-items-center mx-auto">
 				<div class="approuch-block-img ml-md-auto">
 					<img src="img/approch2.jpg" alt="Approuch 2">
-					<div class="inside-block block-left">
+					<div class="inside-block block-left" data-proportion-h="1">
 						<div class="block-step">
 							<div class="block-step-number">2</div>
 							<span>step</span>
@@ -154,16 +154,16 @@
 					</div>
 				</div>
 				
-				<div class="block-text col-md-4 col-lg-6 col-xl-7 mx-auto my-3 my-md-0 text-right">
+				<div class="block-text col-md-5 col-lg-6 col-xl-7 mx-auto my-3 my-md-0 mx-md-2 text-right">
 					<h3>Step 2 : Heading Here</h3>
 					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</span>
 				</div>	
 			</div>
 
-			<div class="approuch-block d-flex flex-column flex-md-row align-items-center justify-content-center mx-auto">
+			<div class="approuch-block d-flex flex-column flex-md-row align-items-center mx-auto">
 				<div class="approuch-block-img mr-md-auto">
 					<img src="img/approch3.jpg" alt="Approuch 3">
-					<div class="inside-block block-right">
+					<div class="inside-block block-right" data-proportion-h="1">
 						<div class="block-step">
 							<div class="block-step-number">3</div>
 							<span>step</span>
@@ -171,16 +171,16 @@
 					</div>
 				</div>
 				
-				<div class="block-text col-md-4 col-lg-6 col-xl-7 mx-auto my-3 my-md-0 text-left">
+				<div class="block-text col-md-5 col-lg-6 col-xl-7 mx-auto my-3 my-md-0 mx-md-2 text-left">
 					<h3>Step 3 : Heading Here</h3>
 					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</span>
 				</div>	
 			</div>
 
-			<div class="approuch-block d-flex flex-column flex-md-row-reverse align-items-center justify-content-center  mx-auto">
+			<div class="approuch-block d-flex flex-column flex-md-row-reverse align-items-center mx-auto">
 				<div class="approuch-block-img ml-md-auto">
 					<img src="img/approch4.jpg" alt="Approuch 4">
-					<div class="inside-block block-left">
+					<div class="inside-block block-left" data-proportion-h="1">
 						<div class="block-step">
 							<div class="block-step-number">4</div>
 							<span class="">step</span>
@@ -188,7 +188,7 @@
 					</div>
 				</div>
 				
-				<div class="block-text col-md-4 col-lg-6 col-xl-7 mx-auto my-3 my-md-0 text-right">
+				<div class="block-text col-md-5 col-lg-6 col-xl-7 mx-auto my-3 my-md-0 mx-md-2 text-right">
 					<h3>Step 4 : Heading Here</h3>
 					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</span>
 				</div>	
@@ -339,9 +339,25 @@
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/stickjaw.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
+        	var SJ_setiings = {
+                options: {
+                    hlw: true, // Height as width
+                    wlh: true, // Width as height
+                    hlt: true, // Width of the target element (target id is the same as for height)
+                    wlt: true, // Height of the target element (target id is the same as for width)
+                    alo: true, // All elements as one (height)
+                },
+                settings: {
+                    windowResize: true, 
+                    writeHystory: true 
+                }
+            }
+    	    var sj = new SJ(SJ_setiings);
+
         	$('.popup-btn').on('click', function(event) {
         		event.preventDefault();
         		$('.popup').fadeIn();
