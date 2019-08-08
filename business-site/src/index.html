@@ -35,27 +35,27 @@
 		<div class="justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav align-items-lg-center align-items-start text-center">
 			  <li class="nav-item active my-1 my-lg-0 mx-0 mx-lg-3">
-			    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			    <a class="nav-link flowing-scroll" href="#banner-section">Home <span class="sr-only">(current)</span></a>
 			  </li>
 			  <li class="divider"></li>
 			  <li class="nav-item my-1 my-lg-0 mx-0 mx-lg-3">
-			    <a class="nav-link" href="#">About Us</a>
+			    <a class="nav-link flowing-scroll" href="#services-section">About Us</a>
 			  </li>
 			  <li class="divider"></li>
 			  <li class="nav-item my-1 my-lg-0 mx-0 mx-lg-3">
-			    <a class="nav-link" href="#">Our Approuch</a>
+			    <a class="nav-link flowing-scroll" href="#approuch-section">Our Approuch</a>
 			  </li>
 			  <li class="divider"></li>
 			  <li class="nav-item my-1 my-lg-0 mx-0 mx-lg-3">
-			    <a class="nav-link" href="#">Our Work</a>
+			    <a class="nav-link flowing-scroll" href="#work-section">Our Work</a>
 			  </li>
-			  <button class="btn popup-btn header-btn my-1 my-lg-0 mx-0 mx-lg-3">Free Consultation</button>
+			  <a class="btn header-btn flowing-scroll my-1 my-lg-0 mx-0 mx-lg-3" href="#fb-anal-section">Free Consultation</a>
 			</ul>
 		</div>
 		</div>
 	</nav>
 
-	<div class="banner">
+	<section class="banner" id="banner-section">
 		<div class="container text-center">
 			<h1>
 				<strong>We Providing</strong><br>
@@ -63,7 +63,7 @@
 			</h1>
 			<button class="btn popup-btn">FREE CONSULTATION</button>
 		</div>
-	</div>
+	</section>
 	
 	<div class="popup">
 		<div class="popup-content col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3">
@@ -91,7 +91,7 @@
 		</div>
 	</div>
 
-	<section class="services">
+	<section class="services" id="services-section">
 		<div class="container text-center">
 			<div class="section-subtitle">
 				<h2>About Us</h2>
@@ -118,7 +118,7 @@
 		</div>
 	</section>
 
-	<section class="approuch">
+	<section class="approuch" id="approuch-section">
 		<div class="container text-center">
 			<div class="section-subtitle">
 				<h2>Our Approuch</h2>
@@ -196,7 +196,7 @@
 		</div>
 	</section>
 	
-	<section class="work">
+	<section class="work" id="work-section">
 		<div class="container text-center">
 			<div class="section-subtitle">
 				<h2>Our Work</h2>
@@ -268,12 +268,12 @@
 		</div>	
 	</section>
 
-	<section class="fb-anal">
+	<section class="fb-anal" id="fb-anal-section">
 		<div class="text-center">
 			<div class="section-subtitle">
 				<h2>Get Your Free Facebook Analysis Now</h2>
 				<span>Enter your details below</span>
-				<a href="#fb-anal-form"><img src="img/ellipse.png" alt="Ellipse"></a>
+				<a class="flowing-scroll" href="#fb-anal-form"><img src="img/ellipse.png" alt="Ellipse"></a>
 			</div>
 			<div class="container d-flex justify-content-center">
 				<div class="form-inline fb-anal-form col-11 col-md-10 col-lg-9 col-xl-8">
@@ -343,6 +343,35 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
+        	$(window).scroll(
+        	    {
+        	        previousTop: 0
+        	    }, 
+        	    function () {
+        	    var currentTop = $(window).scrollTop();
+        	    if (currentTop < this.previousTop) {
+        	        $(".sidebar em").text("Up"); /* optional for demo */
+        	        $(".header-navbar").show();
+        	    } else {
+        	        $(".sidebar em").text("Down");
+        	        $(".header-navbar").hide();
+        	    }
+        	    this.previousTop = currentTop;
+        	});
+
+        	$('.flowing-scroll').on('click', function(event) {
+        		event.preventDefault();
+        		var el = $(this);
+        		var dest = el.attr('href'); // получаем направление
+    		    if(dest !== undefined && dest !== '') { // проверяем существование
+    		        $('html').animate({ 
+    		            scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+    		        }, 500 // скорость прокрутки
+    		        );
+    		    }
+    		    return false;
+        	});
+
         	var SJ_setiings = {
                 options: {
                     hlw: true, // Height as width

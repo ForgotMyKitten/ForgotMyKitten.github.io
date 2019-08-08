@@ -23,6 +23,14 @@ input:focus {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
 }
+.header-navbar {
+  z-index: 20;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 .header-navbar .brand-text-block {
   display: inline-block;
 }
@@ -72,6 +80,7 @@ input:focus {
 }
 .banner {
   padding: 0px 0;
+  margin-top: 100px;
   background: #ffffff url(../img/banner.jpg) center center no-repeat;
   background-size: cover;
 }
@@ -204,10 +213,10 @@ input:focus {
   background-color: #ca251e;
 }
 section {
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 section .section-subtitle {
-  margin-top: 100px;
   display: inline-block;
 }
 section .section-subtitle h2 {
@@ -601,10 +610,8 @@ footer .footer-text a:hover {
 }
 @media (max-width: 767.5px) {
   section {
+    padding-top: 50px;
     padding-bottom: 50px;
-  }
-  section .section-subtitle {
-    margin-top: 50px;
   }
   .banner {
     background-position: 80%;
