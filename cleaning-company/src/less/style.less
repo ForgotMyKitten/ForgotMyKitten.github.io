@@ -1,0 +1,109 @@
+@main-color: #1175b7;
+@btn-color: #f6a937;
+@text-color: 414141;
+
+html {
+	font-size: 10px;
+}
+
+.text(@fs: 1.8rem, @fw: 400, @color: @text-color, @ff: 'Josefin Sans') {
+	font-family: @ff, sans-serif;
+	font-size: @fs;
+	font-weight: @fw;
+	color: @color !important;
+}
+
+.main-btn(@py: auto, @px: auto) {
+	display: inline-block;
+	.text(1.8rem, 600, white);
+	background-color: @btn-color;
+	padding: @py @px;
+	border: none;
+	// outline: 0 none !important;
+	border-radius: 4px;
+	text-align: center;
+	&:hover {
+		background-color: @main-color;
+		transition: all 0.2s;
+		text-decoration: none;
+	}
+	&:active {
+		background-color: darken(@main-color, 5%);
+	}
+}
+
+.navbar {
+	min-height: 120px;
+	&-brand {
+		.text(3.2rem, 700, @main-color);
+		color: @main-color !important;
+		span {
+			color: @btn-color;
+		}
+	}
+	ul > li {
+		font-size: 1.8rem;
+		font-weight: 400;
+		a {
+			display: inline-block;
+			.text(1.8rem, 600, @main-color, "Raleway");
+			&:hover {
+				color: @btn-color !important;
+			}
+		}
+	}
+	&-btn {
+		.main-btn(12px, 22px);
+		display: inline-block;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.banner {
+	text-align: center;
+	background: rgba(17,85,130,0.4) url(../img/banner.jpg) center center no-repeat;
+	background-blend-mode: multiply;
+	height: 800px;
+	background-size: cover;
+	position: relative;
+	&-content {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		color: white;
+		p {
+			.text(2.7rem, 400, white, "Raleway");
+			margin-bottom: 25px;
+		}
+		h1 {
+			.text(5.9rem, 900, white);
+			margin-bottom: 35px;
+		}
+		button {
+			.main-btn(12px, 38px);
+		}
+	}
+}
+
+@media(max-width: 767px) {
+	.banner {
+		background-position: 17%;
+	}
+}
+
+@media (max-width: 575px) {
+	.banner {
+		height: 600px;
+	}
+	.banner-content {
+		p {
+			font-size: 100vw / 20rem;
+		}
+		h1 {
+			font-size: 100vw / 10rem;
+		}
+	}
+}
