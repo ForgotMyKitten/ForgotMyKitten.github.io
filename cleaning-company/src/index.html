@@ -8,6 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Raleway:400,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
     <link rel="stylesheet" href="css/style.css">
 
     <title>H.Cleaning</title>
@@ -54,10 +58,118 @@
     	</div>
     </section>
 
+    <section class="about-us">
+    	<div class="container">
+    		<div class="block-image col-md-9 col-lg-8 col-xl-7">
+    			<!-- <img src="img/about-us-cleaner.jpg" alt="Cleaner"> -->
+    		</div>
+    		<div class="block-info col-12 col-md-7 col-lg-7 col-xl-6">
+    			<div class="content">
+    				<!-- <hr> -->
+					<p class="block-info-subtitle">The best House cleaning Company</p>
+					<h2>About Our Moura's Company</h2>
+					<span>We Specialize in window cleaning,window tinting pressure washing gutter cleaning and more. We are dedicated to improving the look and value of homes and small business in their communites.</span>
+    			</div>
+    		</div>
+    		<div class="block-phone col-12 col-md-7 col-lg-6 col-xl-5">
+    			<div class="content">
+    				<img src="img/phone-call.svg" alt="Phone">
+    				<p>Call Us Today</p>
+    				<span>1-785-452-4521</span>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="our-services">
+    	<div class="container">
+    		<div class="section-subtitle">
+    			<span>
+    				What we are offering
+    			</span>
+    			<h2>
+    				Our Services
+    			</h2>
+    		</div>
+    		<div class="services-slider">
+    			<div class="service-block">
+    				<img src="img/service1.jpg" alt="Service 1">
+    				<div class="desc">
+    					<img src="img/floor-mop.svg" alt="">
+    					<h3>House Cleaning</h3>
+    					<span>A wonderful serenity has taken of my entire soul, like these sweet spring his which enjoy with my whole heart, like a these sweet spring.</span>
+    				</div>
+    			</div>
+    			<div class="service-block">
+    				<img src="img/service2.jpg" alt="Service 2">
+    				<div class="desc">
+    					<img src="img/cleaning.svg" alt="">
+    					<h3>Window Cleaning</h3>
+    					<span>A wonderful serenity has taken of my entire soul, like these sweet spring his which enjoy with my whole heart, like a these sweet spring.</span>
+    				</div>
+    			</div>
+    			<div class="service-block">
+    				<img src="img/service3.jpg" alt="Service 3">
+    				<div class="desc">
+    					<img src="img/spray.svg" alt="">
+    					<h3>Garden Cleaning</h3>
+    					<span>A wonderful serenity has taken of my entire soul, like these sweet spring his which enjoy with my whole heart, like a these sweet spring.</span>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$('.services-slider').slick({
+    			infinite: true,
+    			// centerMode: true,
+    			// centerPadding: '30px',
+    			centerMode: true,
+    			variableWidth: true,
+    			slidesToShow: 1,
+    			slidesToScroll: 1,
+    			arrows: true,
+    			initialSlide: 1,
+    			dots: true,
+    			focusOnSelect: false,
+    			prevArrow: '<button class="arrow left"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve"><g transform="matrix(-1 0 0 1 46.02 0)"><g>	<g>		<path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#038FD6"/>	</g></g></g> </svg></button>',
+				nextArrow: '<button class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve"><g><g>	<g>		<path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#038FD6"/>	</g></g></g> </svg></button>',
+
+    			responsive: [
+    			   {
+    			     breakpoint: 991,
+    			     settings: {
+    			       arrows: false,
+    			       // centerPadding: '40px',
+    			       // slidesToShow: 2,
+    			       // slidesToScroll: 1
+    			     }
+    			   }/*,
+    			   {
+    			     breakpoint: 767,
+    			     settings: {
+    			       arrows: false,
+    			       // centerMode: true,
+    			       // centerPadding: '40px',
+    			       slidesToShow: 1
+    			     }
+    			   }*/
+    			 ]
+    			// slidesToScroll: 1
+    		});
+    	});
+    </script>
   </body>
 </html>
