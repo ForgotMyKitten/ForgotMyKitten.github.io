@@ -314,7 +314,7 @@ button:focus {
 	}
 }
 
-.slick-center {
+.services-slider .slick-center {
 	transition: background-color 0.5s, color 0.5s;
 	background-color: @block-color !important;
 	// color: white !important;
@@ -327,8 +327,177 @@ button:focus {
 	}
 }
 
+.overview {
+	background-color: @block-color;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	// padding: 100px auto;
+	.content {
+		// display: inline-block;
+		// padding: 100px auto;
+	}
+	&-wrap {
+		// display: inline-block;
+		text-align: center;
+		margin-top: 50px;
+		// margin-bottom: 50px;
+		img {
+			display: block;
+			margin: auto auto;
+			text-align: center;
+			height: 61px;
+			margin-bottom: 30px;
+		}
+		span {
+			display: inline-block;
+			.text(2.7rem, 600, white);
+			line-height: 30px;
+		}
+		&:after {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			content: '';
+			width: 1px;
+			height: 145px;
+			opacity: 0.5;
+			background-color: #f0d5b5;
+		}
+		&:last-child:after {
+			display: none;
+		}
+	}
+}
+
+.why-choose-us {
+	padding-top: 120px;
+	.container {
+		position: relative;
+	}
+	.block-image {
+		background-image: url('../img/why-choose-us-cleaner.jpg');
+		// width: 475px;
+		height: 630px;
+		background-position: 45% 50%;
+	}
+	.block-text {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		background-color: white;
+		.subtitle {
+			.text(1.8rem, 600, @block-color, 'Raleway');
+			margin-bottom: 18px;
+			padding-top: 30px;
+			display: inline-block;
+			position: relative;
+			&:before {
+				display: inline-block;
+				content: '';
+				width: 30px;
+				border: 2px solid @btn-color;
+				position: absolute;
+				// top: -50%;
+				transform: translateY(-400%);
+				left: 0;
+			}
+		}
+		h2 {
+			.text(4.3rem, 600, @block-color, 'Raleway');
+			line-height: 55px;
+			margin-bottom: 45px;
+		}
+		ul {
+			padding-left: 0px;
+			list-style-type: none;
+		}
+		ul > li {
+			.text(2rem);
+			margin-bottom: 13px;
+			margin-left: 25px;
+			position: relative;
+			&:before {
+				content: '';
+				background-image: url('../img/check-box-with-check-sign.svg');
+				background-repeat: no-repeat;
+				background-size: 12px 12px;
+				display: inline-block;
+				height: 12px;
+				width: 12px;
+				position: absolute;
+				top: 23%;
+				transform: translateX(-200%);
+			}
+		}
+		.block-certified-company {
+			// .main-btn(30px, 28px);
+			background-color: @btn-color;
+			width: 270px;
+			padding: 28px 28px 28px 15px;
+			margin-top: 45px;
+			border-radius: 3px;
+			img {
+				text-align: left;
+				height: 46px;
+				margin-right: 19px;
+				float: left;
+			}
+			span {
+				// display: inline-block;
+				.text(1.8rem, 700, white, 'Raleway');
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+@media(max-width: 1199px) {
+	.why-choose-us {
+		.block-image {
+			height: 700px;
+			background-position: 40% 50%
+		}
+		.block-text {
+			left: 45% !important;
+		}
+	}
+}
+
 @media(max-width: 991px) {
-	
+	.overview-wrap:after {
+		display: none;
+	}
+	.why-choose-us {
+		background: url('../img/why-choose-us-cleaner.jpg') center center no-repeat;
+		background-size: cover;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		.block-image {
+			display: none;
+		}
+		.block-text {
+			opacity: 0.85;
+			position: relative;
+			left: 0 !important;
+			top: 0 !important;
+		}
+		.block-certified-company {
+			display: inline-block;
+			margin-bottom: 30px;
+			width: 100%;
+		}
+	}
+	.block-certified-company {
+		width: 100% !important;
+		height: 100px !important;
+		position: relative;
+		margin-top: 30px !important;
+		.block-wrap {
+			width: 227px;
+			margin: auto auto;
+		}
+	}
 }
 
 @media(max-width: 767px) {
@@ -337,6 +506,7 @@ button:focus {
 	}
 	.about-us {
 		background: url('../img/about-us-cleaner.jpg') 5% 60% no-repeat;
+		background-size: cover;
 		margin: 0 auto;
 		padding: 60px 0px;
 	}
@@ -359,6 +529,11 @@ button:focus {
 	.our-services {
 		padding-bottom: 60px;
 	}
+	.overview {
+		padding-top: 0px;
+		padding-bottom: 50px;
+	}
+
 }
 
 @media (max-width: 575px) {
@@ -397,6 +572,9 @@ button:focus {
 	}
 	.block-phone {
 		height: 120px;
+	}
+	.why-choose-us {
+		background-position: 32% 50%;
 	}
 }
 
