@@ -7,10 +7,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Raleway:400,600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="modules/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="modules/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="modules/flextabs/jquery.flextabs.min.css">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -168,9 +171,64 @@
     	</div>
     </section>
 
-    <section>
+    <section class="our-projects">
     	<div class="container">
-    		<div class="section-subtitle"></div>
+    		<div class="section-subtitle block-subtitle mx-auto col-12 col-md-8 col-lg-7 col-xl-6">
+    			<h2>Our Projects</h2>
+    			<span>Our company is latest at cleaning servicing company. We can clean your space including home.</span>
+    			<!-- <hr> -->
+    		</div>
+    		<div class="our-projects-tabs">
+    			<nav>
+    				<a href="#all-projects" class="active">All Projects</a>
+    				<a href="#house">House</a>
+    				<a href="#office">Office</a>
+    				<a href="#garden">Garden</a>
+    				<a href="#apartment">Apartment</a>
+    			</nav>
+    			<div class="tab-content">
+    				<div id="all-projects" class="projects-slider">
+    					<img src="img/our-projects-1.jpg" alt="Our Project 1">
+    					<img src="img/our-projects-2.jpg" alt="Our Project 2">
+    					<img src="img/our-projects-3.jpg" alt="Our Project 3">
+    					<img src="img/our-projects-4.jpg" alt="Our Project 4">
+    					<img src="img/our-projects-5.jpg" alt="Our Project 5">
+    					<img src="img/our-projects-6.jpg" alt="Our Project 6">
+    				</div>
+    				<div id="house" class="projects-slider">
+    					<img src="img/our-projects-1.jpg" alt="Our Project 1">
+    					<img src="img/our-projects-2.jpg" alt="Our Project 2">
+    					<img src="img/our-projects-3.jpg" alt="Our Project 3">
+    					<img src="img/our-projects-4.jpg" alt="Our Project 4">
+    					<img src="img/our-projects-5.jpg" alt="Our Project 5">
+    					<img src="img/our-projects-6.jpg" alt="Our Project 6">
+    				</div>
+    				<div id="office" class="projects-slider">
+    					<img src="img/our-projects-1.jpg" alt="Our Project 1">
+    					<img src="img/our-projects-2.jpg" alt="Our Project 2">
+    					<img src="img/our-projects-3.jpg" alt="Our Project 3">
+    					<img src="img/our-projects-4.jpg" alt="Our Project 4">
+    					<img src="img/our-projects-5.jpg" alt="Our Project 5">
+    					<img src="img/our-projects-6.jpg" alt="Our Project 6">
+    				</div>
+    				<div id="garden" class="projects-slider">
+    					<img src="img/our-projects-1.jpg" alt="Our Project 1">
+    					<img src="img/our-projects-2.jpg" alt="Our Project 2">
+    					<img src="img/our-projects-3.jpg" alt="Our Project 3">
+    					<img src="img/our-projects-4.jpg" alt="Our Project 4">
+    					<img src="img/our-projects-5.jpg" alt="Our Project 5">
+    					<img src="img/our-projects-6.jpg" alt="Our Project 6">
+    				</div>
+    				<div id="apartment" class="projects-slider">
+    					<img src="img/our-projects-1.jpg" alt="Our Project 1">
+    					<img src="img/our-projects-2.jpg" alt="Our Project 2">
+    					<img src="img/our-projects-3.jpg" alt="Our Project 3">
+    					<img src="img/our-projects-4.jpg" alt="Our Project 4">
+    					<img src="img/our-projects-5.jpg" alt="Our Project 5">
+    					<img src="img/our-projects-6.jpg" alt="Our Project 6">
+    				</div>
+    			</div>
+    		</div>
     	</div>
     </section>
 
@@ -182,7 +240,9 @@
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="modules/slick/slick.min.js"></script>
+
+	<script src="modules/flextabs/jquery.flextabs.min.js"></script>
 
     <script type="text/javascript">
     	$(document).ready(function(){
@@ -222,6 +282,34 @@
     			   }*/
     			 ]
     			// slidesToScroll: 1
+    		});
+    		$('.our-projects-tabs').flexTabs({
+    			icon: false,
+    			collapsible: false
+    		});
+    		$('.projects-slider').slick({
+    			infinite: true,
+    			slidesToShow: 6,
+    			// initialSlide: 1,
+    			slidesToScroll: 6,
+    			// centerMode: true,
+    			// row: 2,
+    			// slidesPerPow: 3,
+    			variableWidth: true,
+
+    			responsive: [
+    				{
+    					breakpoint: 1199,
+    					settings: {
+    						slidesToShow: 1,
+    						slidesToScroll: 1,
+    						centerMode: true,
+    						centerPadding: '0px',
+    						autoplay: true,
+    						autoplaySpeed: 2000,
+    					}
+    				}
+    			]
     		});
     	});
     </script>

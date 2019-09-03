@@ -229,6 +229,7 @@ button:focus {
 		width: 60px;
 		height: 2px;
 		background-color: @btn-color;
+		margin: 14px auto 18px;
 	}
 }
 
@@ -452,6 +453,70 @@ button:focus {
 	}
 }
 
+.block-subtitle {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 48px;
+	h2 {
+		margin-bottom: 23px;
+	}
+	span {
+		line-height: 24px;
+	}
+	span:after {
+		content: '';
+		position: absolute;
+		width: 60px;
+		height: 2px;
+		background-color: @btn-color;
+		bottom: 12%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.our-projects {
+	nav {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 35px;
+		.active {
+			background: @btn-color;
+			color: white;
+		}
+		a {
+			.text(1.8rem, 600, @text-color);
+			padding: 8px 12px;
+			border-radius: 4px;
+			text-decoration: none;
+			// margin-left: 5px;
+			margin-right: 3px;
+		}
+		a:first-child {
+			margin-left: 0px;
+		}
+		a:last-child {
+			margin-right: 0px;
+		}
+	}
+	.tab-content {
+		div  {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			img {
+				width: 350px !important;
+				height: auto;
+				margin-right: 30px;
+				margin-bottom: 30px;
+			}
+			img:nth-child(3n) {
+				margin-right: 0px;
+			}
+		}
+	}
+}
+
 @media(max-width: 1199px) {
 	.why-choose-us {
 		.block-image {
@@ -462,10 +527,43 @@ button:focus {
 			left: 45% !important;
 		}
 	}
+	.tab-content {
+		div {
+			// display: relative !important;
+			flex-wrap: nowrap !important;
+			img:nth-child(n){
+				margin-left: 15px !important;
+				margin-right: 15px !important;
+				width: 50% !important;
+			}
+			/* img:nth-child(3n) {
+				margin-right: 30px !important;
+			}
+			img:nth-child(2n) {
+				margin-right: 0px !important;
+				// margin-right: auto !important;
+			}
+			img:nth-child(2n-1) {
+				// margin-left: auto !important;
+			} */
+		}
+	}
+	/* .tab-content {
+		div {
+			flex-wrap: nowrap !important;
+			img {
+				width: 82vw !important;
+				height: auto !important;
+			}
+			img:nth-child(3n) {
+				margin-right: 30px !important;
+			}
+		}
+	} */
 }
 
-@media(max-width: 991px) {
-	.overview-wrap:after {
+@media(max-width: 991.5px) {
+	.overview-wrap:nth-child(2n):after {
 		display: none;
 	}
 	.why-choose-us {
@@ -498,6 +596,13 @@ button:focus {
 			margin: auto auto;
 		}
 	}
+	.tab-content {
+		div {
+			img:nth-child(n) {
+				width: 80% !important;
+			}
+		}
+	} 
 }
 
 @media(max-width: 767px) {
@@ -532,6 +637,32 @@ button:focus {
 	.overview {
 		padding-top: 0px;
 		padding-bottom: 50px;
+		.overview-wrap:after {
+			display: none;
+		}
+	}
+	.our-projects {
+		.ft-tab {
+			.text(1.8rem, 600, @text-color);
+			text-decoration: none;
+			text-align: center;
+			border-radius: 4px;
+			padding: 8px 0;
+			margin: 5px 0;
+		}
+		.active {
+			background: @btn-color;
+			color: white;
+		}
+		.tab-content {
+			div {
+				img:nth-child(n) {
+					width: 100% !important;
+					min-height: 100% !important;
+					margin: 0px !important;
+				}
+			}
+		}
 	}
 
 }
