@@ -232,6 +232,55 @@
     	</div>
     </section>
 
+	<section class="testimonials">
+		<div class="testimonials-overlay">
+			<div class="container">
+				<div class="section-subtitle col-12 col-lg-9 col-xl-8 mx-auto">
+					<h2>Delivering the Best Service Solution to Our Client</h2>
+					<button>Book Today</button>
+				</div>
+				<div class="testimonials-table">
+					<div class="testimonials-slider-nav">
+						<div class="wrap-user-pic"><div class="user-pic">
+							<img src="img/user-pic-1.jpg" alt="User Picture 1"></div>
+						</div>
+						<div class="wrap-user-pic"><div class="user-pic">
+							<img src="img/user-pic-2.jpg" alt="User Picture 2"></div>
+						</div>
+						<div class="wrap-user-pic"><div class="user-pic">
+							<img src="img/user-pic-3.jpg" alt="User Picture 3"></div>
+						</div>
+					</div>
+					<div class="testimonials-slider-for">
+						<div class="testimonials-quote">
+							<div class="block-quote">
+								<img src="img/quote.svg" alt="">
+								<blockquote class="col-lg-10 col-xl-9 mx-auto">This is due to their exelent service, company pricing and customer support. It's throughty refresing to get such a personal touch.</blockquote>
+							</div>
+							<span>Zahir Hasan</span>
+						</div>
+						<div class="testimonials-quote">
+							<div class="block-quote">
+								<img src="img/quote.svg" alt="">
+								<blockquote class="col-lg-10 col-xl-9 mx-auto">This is due to their exelent service, company pricing and customer support. It's throughty refresing to get such a personal touch.</blockquote>
+							</div>
+							<span>Zahir Hasan</span>
+						</div>
+						<div class="testimonials-quote">
+							<div class="block-quote">
+								<img src="img/quote.svg" alt="">
+								<blockquote class="col-lg-10 col-xl-9 mx-auto">This is due to their exelent service, company pricing and customer support. It's throughty refresing to get such a personal touch.</blockquote>
+							</div>
+							<span>Zahir Hasan</span>
+						</div>
+					</div>
+					<button class="prev-arrow"><img src="img/move-to-prev.svg" alt=""></button>
+					<button class="next-arrow"><img src="img/move-to-next.svg" alt=""></button>
+				</div>
+			</div>
+		</div>
+	</section>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -287,7 +336,7 @@
     			icon: false,
     			collapsible: false
     		});
-    		$('.projects-slider').slick({
+    		$('.projects-slider1').slick({
     			infinite: true,
     			slidesToShow: 6,
     			// initialSlide: 1,
@@ -310,6 +359,25 @@
     					}
     				}
     			]
+    		});
+    		$('.testimonials-slider-nav').slick({
+    			centerMode: true,
+    			arrows: false,
+    			slidesToShow: 3,
+    			slidesToScroll: 1,
+    			initialSlide: 1,
+    			infinite: false,
+    			variableWidth: true,
+    			asNavFor: '.testimonials-slider-for'
+    		});
+    		$('.testimonials-slider-for').slick({
+    			slidesToShow: 1,
+    			slidesToScroll: 1,
+    			initialSlide: 1,
+    			infinite: false,
+    			prevArrow: '.prev-arrow',
+    			nextArrow: '.next-arrow',
+    			asNavFor: '.testimonials-slider-nav'
     		});
     	});
     </script>
