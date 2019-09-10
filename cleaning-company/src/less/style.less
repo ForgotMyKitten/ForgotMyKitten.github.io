@@ -521,9 +521,10 @@ button:focus {
 }
 
 .testimonials {
+	position: relative;
 	background: url('../img/testimonials-img.jpg') center center no-repeat;
 	background-size: cover;
-	height: 670px;
+	// height: 670px;
 	// text-align: center;
 	&-overlay {
 		width: 100%;
@@ -545,9 +546,11 @@ button:focus {
 	}
 	&-table {
 		position: relative;
+		// transform: translateY(-50%);
 		background: @block-color;
 		display: inline-block;
 		width: 100%;
+		margin-bottom: 50px
 	}	
 	.testimonials-slider-nav {
 		padding-top: 100px;
@@ -647,6 +650,110 @@ button:focus {
 	}
 }
 
+.blog-posts {
+	.post {
+		padding-bottom: 30px;
+	}
+	.post-pic {
+		position: relative;
+		overflow: hidden;
+		min-width: 200px;
+		.date {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: 0;
+			left: 0;
+			transform: translateY(25%);
+			.text(1.6rem, 400, white);
+			width: 110px;
+			height: 30px;
+			background-color: @btn-color;
+		}
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	.post-content {
+		&_title {
+			margin-bottom: 12px;
+			a:hover {
+				text-decoration: underline;
+				color: @text-color;
+			}
+			h3 {
+				.text(2.2rem, 700, @text-color, 'Raleway');
+				line-height: 1.6rem;
+			}
+		}
+		&_info {
+			margin-bottom: 12px;
+			display: flex;
+			a {
+				display: flex;
+				align-items: center;
+				margin-right: 25px;
+			}
+			a:last-child {
+				margin-right: 0;
+			}
+			img {
+				width: 18px;
+			}
+			span {
+				.text(1.4rem, 400, @caption-text-color);
+				line-height: 3rem;
+				margin-left: 5px;
+			}
+		}
+		&_text {
+			.text(1.6rem, 400, @caption-text-color);
+			line-height: 2.2rem;
+			// margin-bottom: 18px;
+		}
+		&_more {
+			a {
+				.text(1.6rem, 600, @text-color, 'Raleway');
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.post-left > .post {
+		.post-pic {
+			margin-bottom: 30px;
+			height: 250px;
+			img {
+				transform: translateY(-20%);
+			}
+		}
+	}
+	.post-right > .post {
+		display: flex;
+		.post-pic {
+			height: 200px;
+			margin-right: 30px;
+			img {
+				transform: translateX(-25%);
+				height: 100%;
+			}
+		}
+		.post-content_text {
+			// width: 80%;
+		}
+		.post-content {
+			position: relative;
+			&_more {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+}
+
 /* ---------------------------------------------------------------------- */
 
 @media(max-width: 1199.5px) {
@@ -669,6 +776,9 @@ button:focus {
 				width: 50% !important;
 			}
 		}
+	}
+	.post-content_info {
+		margin-bottom: 5px !important;
 	}
 }
 
@@ -712,7 +822,27 @@ button:focus {
 				width: 80% !important;
 			}
 		}
-	} 
+	}
+	.post-content_info {
+		margin-bottom: 12px !important;
+	}
+	.post-right > .post {
+		display: block !important;
+		.post-pic {
+			width: 100% !important;
+			height: 250px !important;
+			margin-right: 0px;
+			margin-bottom: 30px;
+			img {
+				transform: translateX(-5%) translateY(-55%) !important;
+				width: auto !important;
+				height: auto !important;
+			}
+		}
+		.post-content_more {
+			position: relative !important;
+		}		
+	}
 }
 
 @media(max-width: 767.5px) {
@@ -783,6 +913,9 @@ button:focus {
 			}
 		}
 	}
+	.testimonials-table {
+		margin-bottom: 30px !important;
+	}
 	.testimonials-slider-nav {
 		padding-top: 50px !important;
 		// padding-bottom: 30px !important;
@@ -796,6 +929,20 @@ button:focus {
 	}
 	.prev-arrow, .next-arrow {
 		display: none !important;
+	}
+	.post-left > .post {
+		.post-pic { 
+			img {
+				transform: translateX(-10%) translateY(-21%) !important;
+			}
+		}
+	}
+	.post-right > .post {
+		.post-pic { 
+			img {
+				transform: translateX(-15%) translateY(-55%) !important;
+			}
+		}
 	}
 }
 
@@ -855,6 +1002,20 @@ button:focus {
 		}
 		.desc {
 			width: 83vw !important;
+		}
+	}
+	.post-left > .post {
+		.post-pic { 
+			img {
+				transform: translateX(-15%) translateY(-21%) !important;
+			}
+		}
+	}
+	.post-right > .post {
+		.post-pic { 
+			img {
+				transform: translateX(-20%) translateY(-55%) !important;
+			}
 		}
 	}
 }
