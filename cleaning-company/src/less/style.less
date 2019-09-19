@@ -120,13 +120,13 @@ button:focus {
 		background: @block-color;
 		// width: 540px;
 		// padding: 145px 52px 112px 65px;
-		.content {
+		/* .content {
 			position: absolute;
 			left: 0;
 			top: 55%;
 			transform: translateY(-50%);
 			margin: auto 60px;
-		}
+		} */
 		hr {
 			width: 30px;
 			height: 3px;
@@ -134,7 +134,7 @@ button:focus {
 			// text-align: left;
 			margin: 0 0 0 auto;
 		}
-		&-subtitle {
+		/* &-subtitle {
 			.text(1.8rem, 600, white, 'Raleway');
 			margin-bottom: 5px;
 			display: inline-block;
@@ -149,9 +149,9 @@ button:focus {
 				transform: translateY(-400%);
 				left: 0;
 			}
-		}
+		} */
 		h2 {
-			.text(4.3rem, 600, white, 'Raleway');
+			// .text(4.3rem, 600, white, 'Raleway');
 			margin-bottom: 33px;
 		}
 		span {
@@ -175,6 +175,33 @@ button:focus {
 	height: 540px;
 	border-left: 30px solid white;
 	border-bottom: 30px solid white;
+	.content {
+		position: absolute;
+		left: 0;
+		top: 52%;
+		transform: translateY(-50%);
+		margin: auto 60px;
+	}
+	&-subtitle {
+		.text(1.8rem, 600, white, 'Raleway');
+		margin-bottom: 5px;
+		display: inline-block;
+		position: relative;
+		&:before {
+			display: inline-block;
+			content: '';
+			width: 30px;
+			border: 2px solid @btn-color;
+			position: absolute;
+			// top: -50%;
+			transform: translateY(-400%);
+			left: 0;
+		}
+	}
+	h2 {
+		.text(4.3rem, 600, white, 'Raleway');
+		// margin-bottom: 33px;
+	}
 }
 
 .block-phone {
@@ -740,9 +767,6 @@ button:focus {
 				height: 100%;
 			}
 		}
-		.post-content_text {
-			// width: 80%;
-		}
 		.post-content {
 			position: relative;
 			&_more {
@@ -750,6 +774,40 @@ button:focus {
 				bottom: 0;
 				left: 0;
 			}
+		}
+	}
+}
+
+.get-free {
+	margin: 100px auto;
+	.container {
+		position: relative;
+	}
+	.block-image {
+		background-image: url('../img/get-free.jpg');
+	}
+	.block-info {
+		background-color: lighten(@btn-color, 25%);
+		&-subtitle, h2 {
+			color: @text-color;
+		}
+	}
+	form {
+		margin-top: 45px;
+		input[type="text"] {
+			width: 100%;
+			padding: 15px 0px 15px 25px;
+			.text(1.6rem);
+			border-radius: 4px;
+			border: none;
+			margin-bottom: 10px;
+			&::placeholder {
+				color: darken(@text-color, 100%);
+			}
+		}
+		input[type="submit"] {
+			margin-top: 10px;
+			.main-btn(15px, 25px);
 		}
 	}
 }
@@ -843,6 +901,11 @@ button:focus {
 			position: relative !important;
 		}		
 	}
+	.get-free {
+		.block-image {
+			background-position: 100%;
+		}
+	}
 }
 
 @media(max-width: 767.5px) {
@@ -851,6 +914,8 @@ button:focus {
 	}
 	.about-us {
 		background: url('../img/about-us-cleaner.jpg') 5% 60% no-repeat;
+	}
+	.about-us, .get-free {
 		background-size: cover;
 		margin: 0 auto;
 		padding: 60px 0px;
@@ -944,6 +1009,10 @@ button:focus {
 			}
 		}
 	}
+	.get-free {
+		background: url('../img/get-free.jpg') center center no-repeat;
+		background-size: cover;
+	}
 }
 
 @media (max-width: 575.5px) {
@@ -990,6 +1059,16 @@ button:focus {
 		padding: 0px;
 		blockquote {
 			font-size: 3rem;
+		}
+	}
+	.get-free {
+		.block-info {
+			height: 100%;
+			 .content {
+			 	position: relative;
+				margin: 50px 20px;
+				transform: translateX(0) translateY(0);
+			}
 		}
 	}
 }
