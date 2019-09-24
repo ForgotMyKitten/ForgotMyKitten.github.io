@@ -302,7 +302,7 @@ button:focus {
 .arrow {
 	position: absolute;
 	top: 50%;
-	border: none;
+	border: 2px solid @block-color;
 	z-index: 5;
 	width: 5rem;
 	height: 5rem;
@@ -328,7 +328,7 @@ button:focus {
 
 .left {
 	left: 0;
-	transform: translateX(-150%) translateY(-50%);
+	transform: translateY(-50%);
 	svg {
 		transform: translateX(-5%);
 	}
@@ -336,7 +336,7 @@ button:focus {
 
 .right {
 	right: 0;
-	transform: translateX(150%) translateY(-50%);
+	transform: translateY(-50%);
 	svg {
 		transform: translateX(5%);
 	}
@@ -812,6 +812,134 @@ button:focus {
 	}
 }
 
+
+footer {
+	.footer-top {
+		background-color: @block-color;
+		height: 100px;
+		.info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100px;
+			.text(1.6rem, 400, white, 'Raleway');
+			border: 1px solid rgba(176, 167, 214, 0.65);
+			&:first-child {
+				justify-content: flex-start;
+				border-left: none;
+			}
+			&:last-child {
+				justify-content: flex-end;
+				border-right: none;
+			}
+			img {
+				height: 16px;
+				margin-right: 6px;
+			}
+		}
+	}
+	.footer-bot {
+		background: @block-color url('../img/footer-bg.png') 0 0 no-repeat;
+		&_inner {
+			display: flex;
+			height: 450px;
+			align-items: center;
+			border-bottom: 1px solid rgba(176, 167, 214, 0.65);
+			// position: relative;
+		}
+		.info {
+			.subtitle {
+				.text(2.2rem, 600, white);
+				position: relative;
+				margin-bottom: 40px;
+				&:after {
+					content: '';
+					position: absolute;
+					width: 30px;
+					height: 3px;
+					background-color: @btn-color;
+					left: 0;
+					bottom: -40%;
+				}
+			}
+			p, .link > a {
+				.text(1.6rem, 400, white);
+			}
+			p {
+				width: 90%;
+				// width: 300px;
+			}
+			.btn-link_wrap {
+				margin-top: 30px;
+			}
+			.btn-link {
+				display: inline-block;
+				border-radius: 100%;
+				width: 35px;
+				height: 35px;
+				background-color: white;
+				position: relative;
+				margin-right: 15px;
+				img {
+					height: 20px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				&:hover {
+					background-color: @btn-color;
+					img {
+						filter: brightness(0%) invert(100%);
+					}
+				}
+			}
+			.link {
+				margin-bottom: 12px;
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
+			form {
+				margin-top: 40px;
+			}
+			input[type="text"] {
+				// transform: translateY(-41%);
+				border: none;
+				height: 46px;
+				width: 240px;
+				padding-left: 15px;
+				.text(1.6rem);
+			}
+			input[type="submit"] {
+				display: inline-block;
+				width: 46px;
+				height: 46px;
+				border: 0;
+				background: @btn-color url('../img/sent-mail.svg') center center no-repeat;
+				background-size: 20px;
+				margin-left: -3px;
+			}
+		}
+		&_sub {
+			height: 100px;
+			display: flex;
+			align-items: center;
+
+			.company {
+				margin-right: 100px;
+				.text(3.2rem, 700, white);
+				span {
+					color: @btn-color;
+				}
+			}
+			.author, a {
+				.text(1.6rem, 400, white);
+			}
+		}
+	}
+}
+
 /* ---------------------------------------------------------------------- */
 
 @media(max-width: 1199.5px) {
@@ -904,6 +1032,32 @@ button:focus {
 	.get-free {
 		.block-image {
 			background-position: 100%;
+		}
+	}
+	.footer-top {
+		height: 300px !important;
+		.info {
+			justify-content: center !important;
+			border: 1px solid rgba(176, 167, 214, 0.65)  !important;
+			border-left: none !important;
+			border-right: none !important;
+		}
+	}
+	.footer-bot {
+		&_inner {
+			height: auto !important;
+		}
+		p {
+			width: 100% !important;
+		}
+		.info {
+			margin-top: 30px;
+			&:last-child {
+				margin-bottom: 30px;
+			}
+			form {
+				margin-top: 30px !important;
+			}
 		}
 	}
 }
@@ -1068,6 +1222,21 @@ button:focus {
 			 	position: relative;
 				margin: 50px 20px;
 				transform: translateX(0) translateY(0);
+			}
+		}
+	}
+	.footer-bot {
+		&_sub {
+			// display: block !important;
+			flex-wrap: wrap !important;
+			height: auto !important;
+			padding: 30px 0;
+			.company {
+				margin-right: 0 !important;
+				// display: block !important;
+			}
+			.author {
+				// display: block !important;
 			}
 		}
 	}
